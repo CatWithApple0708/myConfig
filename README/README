@@ -1,0 +1,33 @@
+install.sh
+
+1. 安装关键包
+
+vim/git/zsh
+ssh/tftp/nfs
+
+2.  安装配置oh-my-zsh
+
+ps:You must reboot the PC to start zsh
+
+.zshrc =>
+	/myConfig/src/zsh/zshrc_basic.sh
+				=>myConfig/config.sh  #这个文件放当前环境的配置
+	/myConfig/src/zsh/zshrc_extend.sh
+
+3. 安装配置vim-basic
+
+.vimrc =>
+	 set runtimepath+=~/myConfig/src/vim_runtime/
+	 source ~/myConfig/src/vim_runtime/vimrcs/basic.vim
+	 source ~/myConfig/src/vim_runtime/vimrcs/filetypes.vim
+	 source ~/myConfig/src/vim_runtime/vimrcs/plugins_config.vim
+	 source ~/myConfig/src/vim_runtime/vimrcs/extended.vim
+	 source ~/myConfig/src/vim_runtime/my_configs.vim
+
+4. 创建文件目录
+
+mkdir ~/Space
+mkdir -p /Others/default_nfs
+mkdir -p /Others/tftpboot
+mkdir tmp
+

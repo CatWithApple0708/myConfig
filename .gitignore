@@ -1,0 +1,2 @@
+#ignore temp_dirs 
+/src/vim_runtime/temp_dirs/*

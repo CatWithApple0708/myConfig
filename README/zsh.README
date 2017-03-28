@@ -1,0 +1,4 @@
+.zshrc =>
+	/myConfig/src/zsh/zshrc_basic.sh
+				=>myConfig/config.sh  #这个文件放当前环境的配置
+	/myConfig/src/zsh/zshrc_extend.sh
