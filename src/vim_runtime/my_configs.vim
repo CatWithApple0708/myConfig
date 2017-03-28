@@ -33,6 +33,7 @@ highlight Search term=standout ctermbg=1 guibg=Red
 "开启高亮光标列
 set cursorcolumn
 "改变光标
+"
 
 "Background
 hi Normal  ctermfg=252 ctermbg=none
