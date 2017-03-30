@@ -3,25 +3,12 @@
 #cross compiler
 # 这个脚本 需要用source 来执行
 export PATH=$PATH:/usr/local/arm/current_compiler/bin
-export MyConfigPath=$HOME
 #opendir
 alias opendir='nautilus'
 
-#remove fontconfig Desktop
-# if test -e ~/fontconfig
-# then
-# 	rm -r ~/fontconfig
-# fi
-
-# if test -e ~/Desktop
-# then
-# 	rm -r ~/Desktop
-# fi
 #autojump
 # [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-
-#change ip
 
 #iterm2 ssh_rmote_download setting 用来实现iterm的ssh下载服务的
 

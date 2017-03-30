@@ -1,0 +1,8 @@
+apt-get list
+git
+ zsh
+ vim-gtk
+ openssh-server
+ tftpd-hpa tftp-hpa
+ nfs-kernel-server
+
