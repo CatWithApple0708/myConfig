@@ -30,6 +30,7 @@ echo "source ~/myConfig/src/zsh/zshrc_extend.sh" >> ~/.zshrc
 #install local_setting
 echo -e "echo \"source $MyConfigDir/config.sh\" >> ~/.zshrc"
 echo -e "source $MyConfigDir/config.sh" >> ~/.zshrc
+
 echo -e "source $MyConfigDir/config.sh" >> ~/.bashrc
 
 # vimrc config

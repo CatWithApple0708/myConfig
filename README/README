@@ -36,12 +36,15 @@ zsh配置信息将使用oh-my-zsh的配置信息
 	/myConfig/src/zsh/zshrc_basic.sh
 	/myConfig/src/zsh/zshrc_extend.sh
 另外推荐修改zsh相关的配置的时候将修改内容添加到zshrc_extend.sh中
-linux系统相关的配置在config.sh中修改
-	在
+linux系统相关的配置建议在config.sh中修改
+
+	zsh在
 	/myConfig/src/zsh/zshrc_basic.sh
 	你会找到 source ~/myConfig/config.sh 这个条信息
-	在~/.bashrc
-	也可以找到相同的命令(是在install_basic.sh进行添加)
+	
+	但在bash ~/.bashrc
+	你需要手动执行下面的命令
+	echo -e "source $MyConfigDir/config.sh" >> ~/.bashrc
 
 Note:默认自动切换到zsh，可以通过chsh命令改变默认shell，第一次安装zsh电脑需要重启才能使用zsh
 
