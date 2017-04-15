@@ -2,8 +2,8 @@
 " => Basic Setting
 """"""""""""""""""""""""""""""
 " 设置代码折叠
-set fdm=indent
-set foldlevel=99
+" set fdm=indent
+" set foldlevel=99
 
 
 " 状态栏
