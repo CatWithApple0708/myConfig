@@ -13,7 +13,17 @@ export MyConfigPath=$HOME/myConfig
 PS1="\[\033[0;32m\]\u@\W\$\[\033[00m\] "
 # PS1='\[\033[s\033[0;0H\033[0;41m\033[K\033[1;33m\H\033[0m\033[u\033[1;32m\]\u@\W\$ \[\033[00m\] '
 export PS1
+ # You may uncomment the following lines if you want `ls' to be colorized:
+  export LS_OPTIONS='--color=auto'
+  eval "`dircolors`"
+  alias ls='ls $LS_OPTIONS'
+  alias ll='ls $LS_OPTIONS -l'
+  alias l='ls $LS_OPTIONS -lA'
 
+ # Some more alias to avoid making mistakes:
+ # alias rm='rm -i'
+ # alias cp='cp -i'
+ # alias mv='mv -i'
 
 
 #autojump
@@ -22,5 +32,4 @@ export PS1
 
 #iterm2 ssh_rmote_download setting 用来实现iterm的ssh下载服务的
 
-export iterm2_hostname=192.168.5.5
 # source $MyConfigPath/src/iterm2_intergration/iterm2_shell_integration.`basename $SHELL`
