@@ -2,12 +2,13 @@
 #Environment Config 这个文件里面不要放zsh配置相关配置，只能放公用的环境配置
 #cross compiler
 # 这个脚本 需要用source 来执行
-export PATH=$PATH:/usr/local/arm/current_compiler/bin
+
+export MyConfigPath=$HOME/myConfig
+source $MyConfigPath/src/export.sh
 # export PATH=$PATH:$HOME/myConfig/usr/bin
 #opendir
 alias opendir='nautilus'
 # 获得当前脚本的目录
-export MyConfigPath=$HOME/myConfig
 
 
 PS1="\[\033[0;32m\]\u@\W\$\[\033[00m\] "
@@ -19,6 +20,14 @@ export PS1
   alias ls='ls $LS_OPTIONS'
   alias ll='ls $LS_OPTIONS -l'
   alias l='ls $LS_OPTIONS -lA'
+
+  alias cdk='cd $KERNEL'
+  alias cdt='cd $TOOLS'
+  alias vime='vim $MyConfigPath/src/export.sh'
+  alias vimc='vim $MyConfigPath/config.sh'
+  alias sourceb='source ~/.bashrc'
+  alias chroot='chroot --userspec=root:root'
+
 
  # Some more alias to avoid making mistakes:
  # alias rm='rm -i'
