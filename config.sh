@@ -11,7 +11,7 @@ alias opendir='nautilus'
 # 获得当前脚本的目录
 
 
-PS1="\[\033[0;32m\]\u@\W\$\[\033[00m\] "
+PS1="\[\033[0;32m\]=>\u\033[0;32m\]@\033[0;32m\]\W\$\[\033[00m\] "
 # PS1='\[\033[s\033[0;0H\033[0;41m\033[K\033[1;33m\H\033[0m\033[u\033[1;32m\]\u@\W\$ \[\033[00m\] '
 export PS1
  # You may uncomment the following lines if you want `ls' to be colorized:
@@ -28,6 +28,9 @@ export PS1
   alias sourceb='source ~/.bashrc'
   alias chroot='chroot --userspec=root:root'
 
+  alias cdw='cd $__WORK_PLACE'
+  alias setw='export __WORK_PLACE=`pwd`'
+  alias sourcec='source ~/myConfig/config.sh'
 
  # Some more alias to avoid making mistakes:
  # alias rm='rm -i'
