@@ -1,0 +1,7 @@
+if [ ! $1 ]
+then
+	echo "scp-mac file"
+	exit 1
+fi
+
+scp $1 zhaohe@192.168.1.10:/Users/zhaohe/sshfs/192-168-1-11

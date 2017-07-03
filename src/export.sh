@@ -1,7 +1,13 @@
-export PATH=$PATH:/usr/local/arm/current_compiler/bin
-export KERNEL=/home/zhaohe/cspace/rk3128_Zhaohe/svn/rk3128/kernel_yuan
-export TOOLS=$MyConfigPath/src/bin/
+export KERNEL=/home/zhaohe/Space/3128
+export TOOLS=$MyConfigPath/src/bin
 
 
-export JRE_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64/jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JRE_HOME=$JAVA_HOME/jre
+
 export LD_LIBRARY_PATH=.
+export LIBRARY_PATH=.
+
+export PATH=$PATH:$TOOLS
+export PATH=$PATH:$TOOLS/Linux_Upgrade_Tool_v1.2
+export PATH=$PATH:$TOOLS

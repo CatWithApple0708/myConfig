@@ -4,7 +4,7 @@
 " 设置代码折叠
 " set fdm=indent
 set foldlevel=99
-
+set mouse+=i
 
 " 状态栏
 set laststatus=2      " 总是显示状态栏
@@ -74,6 +74,7 @@ set wrap "Wrap lines
 "复制到系统剪贴板
 map    <leader>y  "+y
 
+map  <leader>mn  :set mouce+=n<CR>
 "跳到上一个/下一个文件
 "nmap    <leader>n   :bn<CR>
 "nmap    <leader>p :bp<CR>

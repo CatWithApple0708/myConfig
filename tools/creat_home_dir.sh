@@ -1,5 +1,5 @@
 #/bin/bash
-if test -e ~/Space 
+if test  -e ~/Space 
 then
 	echo "Dir has created."
 else
@@ -9,6 +9,16 @@ else
 	mkdir -p ~/Others/tftpboot
 	mkdir ~/tmp
 	#mkdir origin home/dir
+
+
+     rm -r ~/Desktop
+     rm -r ~/Downloads
+     rm -r ~/Templates
+     rm -r ~/Publicshare
+     rm -r ~/Document
+     rm -r ~/Music
+     rm -r ~/Pictures
+     rm -r ~/Videos
 
 	mkdir -p ~/Others/ubuntu/Desktop
 	mkdir -p ~/Others/ubuntu/download

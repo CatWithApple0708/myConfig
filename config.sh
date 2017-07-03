@@ -27,6 +27,8 @@ export PS1
   alias vimc='vim $MyConfigPath/config.sh'
   alias sourceb='source ~/.bashrc'
   alias chroot='chroot --userspec=root:root'
+  alias cdw='cd $WORKPLACE'
+  alias setw='export WORKPLACE=`pwd`'
 
 
  # Some more alias to avoid making mistakes:
