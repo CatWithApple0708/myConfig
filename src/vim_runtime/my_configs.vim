@@ -163,7 +163,7 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 """"""""""""""""""""""""""""""
 " 输入":set tags+=/PATH/TO/tags"
 set tags=tags;
-set tags+=/usr/include/tags
+" set tags+=/usr/include/tags
 "
 
 "

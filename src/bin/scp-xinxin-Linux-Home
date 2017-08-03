@@ -1,0 +1,8 @@
+if [ ! $1 ]
+then
+	echo $1 file
+fi
+for file in $1
+do
+	scp $file gxx@192.168.1.191:/home/gxx/
+done
