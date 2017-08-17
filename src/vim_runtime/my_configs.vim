@@ -73,6 +73,12 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""
 "复制到系统剪贴板
 map    <leader>y  "+y
+map    <leader>ay "ay
+map    <leader>by "by
+map    <leader>cy "cy
+map    <leader>ap "ap
+map    <leader>bp "bp
+map    <leader>cp "cp
 
 map  <leader>mn  :set mouce+=n<CR>
 "跳到上一个/下一个文件

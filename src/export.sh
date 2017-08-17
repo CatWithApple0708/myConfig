@@ -12,4 +12,4 @@ export PATH=$PATH:$TOOLS
 export PATH=$PATH:$TOOLS/Linux_Upgrade_Tool_v1.2
 export PATH=$PATH:/home/zhaohe/myConfig/src/crosstool-ng-1.23.0/bin
 # export PATH=$PATH:/home/zhaohe/myConfig/src/crossTools/arm_gcc_he-17-7-12/bin
-export PATH=$PATH:/home/zhaohe/myConfig/src/crossTools/armv7-rpi2-linux-gnueabihf-2/bin
+export PATH=/home/zhaohe/Space/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/:$PATH
