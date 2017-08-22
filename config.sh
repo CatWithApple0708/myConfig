@@ -38,6 +38,7 @@ alias opendir='nautilus'
   alias setw='export __WORK_PLACE=`pwd`'
   alias sourcec='source ~/myConfig/config.sh'
   alias sshfs='sshfs -o sshfs_sync -o no_readahead -o allow_root  -o cache_timeout=5 -o transform_symlinks'
+  alias rm='my_rm.sh'
 
  # Some more alias to avoid making mistakes:
  # alias rm='rm -i'

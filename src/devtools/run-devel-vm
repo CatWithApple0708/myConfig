@@ -1,0 +1,91 @@
+#!/bin/sh
+
+version="0.2"
+visual=no
+# Handle command line arguments
+
+while [ -n "$1" ]; do
+    case "$1" in 
+        --visual)
+            visual=yes
+            shift
+            ;;
+        --help|-h)
+            echo "Usage: run-devel-vm [device name]"
+            exit 0
+            ;;
+        --version)
+            echo "run-devel-vm, version $version"
+            exit 0
+            ;;
+        *)
+            # Perhaps it is a device name?
+            case $1 in
+                pc|i386)
+                    device="$1"
+                    shift
+                    ;;
+                pi2|bbb|dragon)
+                    echo "Running this device as a VM is not supported." 1>&2
+                    exit 1
+                    ;;
+                *)
+                    echo "Unrecognized argument: $1" 1>&2
+                    exit 1
+                    ;;
+            esac
+            ;;
+    esac
+done
+
+# Interactively ask about the device if necessary.
+
+while [ -z "$device" ]; do
+    echo "Which device do you have?"
+    echo
+    echo "Supported guest (virtualized) devices:"
+    echo " pc:      Modern Intel/AMD Computer (64 bit)"
+    echo " i386:    Legacy Intel/AMD Computer (32 bit)"
+    echo
+    echo -n "device> "
+    read device 
+    case "$device" in
+        pc|i386)
+            ;;
+        pi2|bbb|dragon)
+            device=""
+            echo "Running this device as a VM is not supported."
+            ;;
+        *)
+            echo "Unrecognized device name: $device"
+            device=""
+            ;;
+    esac
+done
+
+# Build an image if necessary
+
+if [ ! -e $device-devel.img ]; then
+    sudo ./ubuntu-image --developer-mode $device || exit $?
+fi
+
+# Find out which qemu executable to use
+
+case $device in
+    pc)
+        qemu="qemu-system-x86_64"
+        ;;
+    i386)
+        qemu="qemu-system-i386"
+        ;;
+esac
+
+qemu_options="-m 512 -snapshot -redir tcp:8022::22"
+case $visual in
+    no)
+        qemu_options="$qemu_options -nographic"
+        ;;
+esac
+
+# Run qemu
+exec sudo "$qemu" $qemu_options "$device-devel.img"
