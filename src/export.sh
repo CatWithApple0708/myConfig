@@ -22,3 +22,4 @@ export __WORK_PLACE=/home/zhaohe/Space/git
 export GOPATH=~/hacking
 export PATH=$PATH:/usr/local/go/bin/
 export PATH=$PATH:$GOPATH/bin/
+export PATH=$PATH:/home/zhaohe/myConfig/src/devtools/  

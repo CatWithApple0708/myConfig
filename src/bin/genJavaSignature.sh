@@ -1,3 +1,4 @@
+#!/bin/bash
 Method=""
 if [[ $1 ]]; then
 	echo "Parse........."

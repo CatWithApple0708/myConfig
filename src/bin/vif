@@ -1,0 +1,4 @@
+#!/bin/bash
+file=`find -name $1`
+shift
+vim $file $@
