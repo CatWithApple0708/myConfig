@@ -6,7 +6,10 @@ all_src=`ls *.c 2>/dev/null `
 t_src=`ls test_*.c 2>/dev/null `
 y_src=`ls *.c -1 2>/dev/null | sed -r '/test_/d' `
  
-for i_dir in $all_dir
+test_dir=`echo $all_dir | xargs -n1 | grep test_`
+normal_dir=`echo $all_dir | xargs -n1 |sed -r '/test_/d' `
+
+for i_dir in $normal_dir
 do
 	echo "obj-y += $i_dir/"
 done
@@ -25,4 +28,11 @@ for i_src in $t_src;do
 	obj=`echo $i_src | awk -F. '{print $1".o"}'`
 	echo "obj-y += $obj"
 done
+
+
+for i_dir in $test_dir
+do
+	echo "obj-y += $i_dir/"
+done
+
 echo "endif"

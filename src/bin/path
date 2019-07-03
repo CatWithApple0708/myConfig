@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ ! -n "$1" ] ;then
+	path_root=.
+else
+	path_root=$1
+fi
+
+cd $path_root
+PATH=`pwd`
+ALL_FILE=`/bin/ls -1`
+for file in $ALL_FILE
+do
+	FULL_PATH=${PATH}/$file
+	echo $FULL_PATH
+done

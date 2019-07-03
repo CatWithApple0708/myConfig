@@ -169,7 +169,7 @@ nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 """"""""""""""""""""""""""""""
 " 输入":set tags+=/PATH/TO/tags"
 set tags=tags;
-" set tags+=/usr/include/tags
+set tags+=~/Space/libzcutil/tags
 "
 
 "
@@ -266,7 +266,7 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
 endif
 "let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim

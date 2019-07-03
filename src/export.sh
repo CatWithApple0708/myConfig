@@ -10,12 +10,17 @@ export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/usr/aa
 export DT_RUNPATH=/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/usr/aarch64-linux-gnu/lib/
 export LIBRARY_PATH=.
 
+export PATH=/home/zhaohe/workplace/Space/T20/toolchain/mips-gcc472-glibc216-64bit/bin:$PATH
 export PATH=$PATH:$TOOLS
+export PATH=$PATH:/home/zhaohe/Space/tools/bin
 export PATH=$PATH:$TOOLS/Linux_Upgrade_Tool_v1.2
 export PATH=$PATH:/home/zhaohe/myConfig/src/crosstool-ng-1.23.0/bin
 # export PATH=$PATH:/home/zhaohe/myConfig/src/crossTools/arm_gcc_he-17-7-12/bin
 export PATH=/home/zhaohe/Space/gcc-linaro-4.9-2016.02-x86_64_arm-linux-gnueabihf/bin/:$PATH
+export PATH=/home/zhaohe/Space/depot_tools/:$PATH
+export PATH=/home/zhaohe/workplace/Space/software/cross-compile/bin/:$PATH
 export __WORK_PLACE=/home/zhaohe/Space/git
+
 
 
 # go Enviroment
@@ -23,3 +28,7 @@ export GOPATH=~/hacking
 export PATH=$PATH:/usr/local/go/bin/
 export PATH=$PATH:$GOPATH/bin/
 export PATH=$PATH:/home/zhaohe/myConfig/src/devtools/  
+
+
+#webrtc-compile
+export PATH=/home/zhaohe/workplace/Space/depot_tools:$PATH

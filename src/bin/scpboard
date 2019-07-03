@@ -1,0 +1,6 @@
+#!/bin/bash
+#获得最后的参数
+#for last; do true; done
+#echo "scp $last $@"
+dir=`pwd`
+scp  $dir/$1 root@192.168.1.197

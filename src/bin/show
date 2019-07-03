@@ -1,0 +1,4 @@
+#!/bin/bash
+PATH=`pwd`
+FULL_PATH=${PATH}/$1
+echo $FULL_PATH
